@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Chi tiết khóa học Làm chủ smartphone cơ bản - Hướng dẫn từng bước cách sử dụng, kết nối wifi, cài app và quét mã QR đơn giản nhất.">
+  <title>Chi tiết bài học Kỹ năng số - Cẩm nang số</title>
+  
+  <!-- Font chữ Lexend hiện đại, cực kỳ dễ đọc qua Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Liên kết các file CSS hệ thống (Đường dẫn tương đối cấp 2) -->
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/detail.css">
+  <link rel="stylesheet" href="../css/kynangso.css"> <!-- Nạp thêm CSS riêng cho bước học tập của Kỹ năng số -->
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       HEADER & THANH ĐIỀU HƯỚNG STICKY
+       ========================================== -->
+  <header class="site-header" id="site-header">
+    <div class="container navbar-container">
+      
+      <!-- LOGO HỆ THỐNG -->
+      <a href="../index.html" class="brand-logo" id="logo-main">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 19.4c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l1.9-1.9C9.22 19.58 10.57 20 12 20c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 15c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6zm-1-9h2v2h-2zm0 4h2v2h-2z"/>
+        </svg>
+        <div class="brand-text">
+          <span class="brand-title">CẨM NANG SỐ</span>
+          <span class="brand-subtitle">Bình đẳng & Công nghệ vùng sâu</span>
+        </div>
+      </a>
+
+      <!-- MENU ĐIỀU HƯỚNG TRÊN DESKTOP -->
+      <nav class="nav-menu" aria-label="Menu điều hướng chính">
+        <a href="../index.html" class="nav-link" id="nav-home">Trang chủ</a>
+        <a href="phapluat.html" class="nav-link" id="nav-law">Pháp luật</a>
+        <a href="duan.html" class="nav-link" id="nav-project">Dự án</a>
+        <a href="kynangso.html" class="nav-link active" id="nav-skills">Kỹ năng số</a>
+        <a href="game-luadao.html" class="nav-link" id="nav-game">Trò chơi</a>
+      </nav>
+
+      <!-- ĐIỀU KHIỂN TRÊN MOBILE (HAMBURGER & SEARCH GIAO DIỆN) -->
+      <div class="mobile-controls">
+        <div class="search-container">
+          <input type="text" placeholder="Tìm khóa học..." class="search-input" aria-label="Tìm kiếm bài học">
+          <button class="search-icon-btn" aria-label="Nút Tìm kiếm">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+            </svg>
+          </button>
+        </div>
+
+        <button class="hamburger-btn" id="hamburger-toggle" aria-label="Mở menu di động">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- BACKGROUND OVERLAY KHI MỞ MENU MOBILE -->
+  <div class="mobile-nav-overlay" id="mobile-overlay"></div>
+
+  <!-- MENU MOBILE DRAWER (MỞ TRƯỢT SANG) -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <div class="search-container">
+      <input type="text" placeholder="Tìm khóa học..." class="search-input" aria-label="Tìm kiếm bài học di động">
+      <button class="search-icon-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+        </svg>
+      </button>
+    </div>
+    
+    <ul class="mobile-drawer-menu">
+      <li>
+        <a href="../index.html" class="mobile-drawer-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+          Trang chủ
+        </a>
+      </li>
+      <li>
+        <a href="phapluat.html" class="mobile-drawer-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+          Pháp luật & Đời sống
+        </a>
+      </li>
+      <li>
+        <a href="duan.html" class="mobile-drawer-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 8 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+          Dự án cộng đồng
+        </a>
+      </li>
+      <li>
+        <a href="kynangso.html" class="mobile-drawer-link active">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/></svg>
+          Kỹ năng công nghệ
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- BANNER KHÓA HỌC DỊU DÀNG -->
+  <section class="detail-hero-banner" id="skills-detail-hero" style="background-image: linear-gradient(to bottom, rgba(30, 77, 54, 0.4) 0%, rgba(28, 45, 36, 0.95) 100%), url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1200&q=80');">
+    <div class="container">
+      <h1 id="skills-detail-title">Bài học: Làm chủ điện thoại thông minh (Smartphone)</h1>
+      <p class="detail-short-desc">
+        Hướng dẫn chi tiết, từng bước dễ thực hành dành cho người mới bắt đầu. Học cách kết nối, tải ứng dụng và quét mã QR giao dịch.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       BỐ CỤC CHÍNH HAI CỘT
+       ========================================== -->
+  <div class="container py-5">
+    <div class="detail-layout-container">
+      
+      <!-- CỘT NỘI DUNG CHÍNH (MAIN ARTICLE CONTENT) -->
+      <main class="article-body" id="skills-main-article">
+        
+        <!-- NÚT QUAY LẠI GÓC BÉ XINH -->
+        <a href="kynangso.html" class="btn-back-link" title="Quay lại trang Kỹ năng số">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+          </svg>
+        </a>
+        
+        <!-- 1. VIDEO BÀI HỌC LỚN Ở TRÊN ĐẦU TRANG NỘI DUNG -->
+        <section class="video-section" id="skills-lesson-video" style="margin-top: 0;">
+          <div class="video-wrapper">
+            <iframe width="100%" height="400" src="https://drive.google.com/file/d/1sXxU-1z7GfJGgTpNAMuKGOh3RnWADqwH/preview" allowfullscreen></iframe>
+            </div>
+          <p class="video-caption">Video hướng dẫn: 5 phút làm quen các phím bấm trên điện thoại cảm ứng (Nguồn: Kênh Công nghệ Cộng đồng)</p>
+        </section>
+
+        <!-- 2. THANH TRỢ NĂNG HỖ TRỢ ĐỌC & ĐÁNH DẤU HOÀN THÀNH -->
+        <div class="reading-helper-bar" id="reading-assistant">
+          <div class="helper-title">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M9 4v3h5v12h3V7h5V4H9zm-6 6v3h3v6h3v-6h3v-3H3z"/>
+            </svg>
+            <span class="no-resize">CỠ CHỮ:</span>
+            <div class="resizer-controls" style="margin-left: 8px;">
+              <button class="resizer-btn" id="btn-font-decrease">Nhỏ</button>
+              <button class="resizer-btn" id="btn-font-reset">Chuẩn</button>
+              <button class="resizer-btn" id="btn-font-increase">Lớn</button>
+            </div>
+          </div>
+          
+          <!-- Nút Đánh dấu đã hoàn thành bài học (Lưu client-side giả lập) -->
+          <button class="btn btn-secondary" id="btn-mark-read" style="padding: 6px 16px; font-size: 0.9rem; min-height: 38px;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" style="margin-right: 4px; vertical-align: middle;">
+              <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+            </svg> Đánh dấu hoàn thành
+          </button>
+        </div>
+
+        <!-- 3. NỘI DUNG VĂN BẢN HƯỚNG DẪN CHI TIẾT TỪNG BƯỚC -->
+        <div class="article-text-content" id="article-text-placeholder">
+          <p>
+            Chào mừng chị em đến với bài học đầu tiên. Điện thoại thông minh là công cụ đắc lực giúp chị em gọi điện nói chuyện trực tiếp nhìn thấy mặt người thân ở xa và tra cứu thông tin nuôi trồng bổ ích. Đừng lo lắng nếu mình chưa từng dùng điện thoại cảm ứng, hãy cùng làm theo hướng dẫn từng bước rất dễ dàng dưới đây.
+          </p>
+
+          <h2>Quy trình 3 bước sử dụng Smartphone cơ bản</h2>
+          <p>
+            Hãy đặt điện thoại trước mặt và thực hành tuần tự theo các bước cầm tay chỉ việc:
+          </p>
+          
+          <ol class="step-study-list">
+            
+            <li class="step-study-item">
+              <div class="step-number">1</div>
+              <div class="step-study-content">
+                <h4>Kết nối mạng internet (Wifi hoặc mạng 4G)</h4>
+                <p>
+                  Vuốt nhẹ màn hình từ mép trên cùng xuống phía dưới để mở bảng cài đặt nhanh. Nhấp chọn biểu tượng Wifi (hình giống cây quạt) và chọn tên mạng của xã/nhà văn hóa bản, gõ mật khẩu đăng nhập. Hoặc nhấp chọn biểu tượng Dữ liệu di động (hai mũi tên ngược chiều) nếu chị em đã mua gói cước SIM 4G.
+                </p>
+              </div>
+            </li>
+
+            <li class="step-study-item">
+              <div class="step-number">2</div>
+              <div class="step-study-content">
+                <h4>Tải các ứng dụng học tập hữu ích</h4>
+                <p>
+                  Tìm trên màn hình điện thoại biểu tượng cửa hàng ứng dụng: <strong>CH Play</strong> (đối với điện thoại Android như Samsung, Oppo) hoặc <strong>App Store</strong> (đối với điện thoại iPhone). Gõ chữ "Zalo" hoặc "VNeID" vào thanh tìm kiếm trên cùng, sau đó nhấn nút <strong>Cài đặt</strong> (hoặc Tải về). Đợi 1 phút để máy tự cài đặt.
+                </p>
+              </div>
+            </li>
+
+            <li class="step-study-item">
+              <div class="step-number">3</div>
+              <div class="step-study-content">
+                <h4>Quét mã QR để giao dịch hoặc khai báo</h4>
+                <p>
+                  Mở ứng dụng Camera chụp ảnh mặc định trên điện thoại hoặc mở tính năng quét QR tích hợp sẵn trong Zalo. Hướng camera về phía hình vuông mã QR (ví dụ: mã nhận tiền của hợp tác xã, mã khai báo thông tin y tế/luật pháp). Điện thoại sẽ tự động nhận diện và mở ra liên kết thông tin.
+                </p>
+              </div>
+            </li>
+
+          </ol>
+        </div>
+
+        <!-- 4. HÌNH ẢNH MINH HỌA CÁC BƯỚC THAO TÁC TRÊN MÀN HÌNH -->
+        <section class="gallery-section" id="skills-screenshot-illustrations">
+          <h3>Hình ảnh minh họa thao tác thực tế</h3>
+          <p style="font-size: 0.95rem; color: var(--color-text-muted); margin-bottom: 20px;">
+            Ảnh minh họa các màn hình giao diện quét mã QR trên điện thoại di động giúp chị em dễ hình dung:
+          </p>
+          <div class="gallery-grid" style="grid-template-columns: 1fr 1fr;">
+            
+            <div class="gallery-item">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg57FYiQEHzbh-nJ7g_c15QDj2-wa06eU2ozNsLQOxErymiaztMpNiN6k&s=10" alt="Cách bật Wifi trên thanh cài đặt nhanh của điện thoại" data-lightbox="true">
+              <p class="gallery-caption">Bật Wifi hoặc mạng di động</p>
+            </div>
+
+            <div class="gallery-item">
+              <img src="https://cdn-media.sforum.vn/storage/app/media/wp-content/uploads/2023/10/qr-code-scanner-thumb.jpg" alt="Cách hướng camera điện thoại quét chính xác mã vuông QR" data-lightbox="true">
+              <p class="gallery-caption">Hướng camera quét mã QR vuông</p>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- 5. FAQ ACCORDION - GIẢI ĐÁP CÁC THẮC MẮC THƯỜNG GẶP KHI THỰC HÀNH -->
+        <section class="faq-section" id="skills-faq">
+          <h3>Các câu hỏi thường gặp khi thực hành</h3>
+          <p style="font-size: 0.95rem; color: var(--color-text-muted);">
+            Nhấp chọn vào câu hỏi bất kỳ dưới đây để xem lời hướng dẫn giải pháp khắc phục nhanh:
+          </p>
+          
+          <ul class="accordion-list">
+            
+            <li class="accordion-item" id="faq-item-1">
+              <div class="accordion-header">
+                <h4>Tôi không tìm thấy cửa hàng ứng dụng CH Play trên điện thoại Android?</h4>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  Đôi khi biểu tượng CH Play bị vô tình kéo vào một thư mục khác hoặc bị ẩn. Chị em hãy vuốt màn hình từ dưới lên để mở thanh tìm kiếm tất cả ứng dụng, gõ chữ "CH Play" hoặc "Play Store". Nếu vẫn không thấy, có thể điện thoại của chị em đã tắt ứng dụng này trong phần Cài đặt hệ thống, hãy nhờ cán bộ thanh niên tình nguyện xã kích hoạt lại giúp nhé.
+                </p>
+              </div>
+            </li>
+
+            <li class="accordion-item" id="faq-item-2">
+              <div class="accordion-header">
+                <h4>Tại sao camera của tôi hướng vào mã QR nhưng máy không tự động quét?</h4>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  Có ba lý do phổ biến: Thứ nhất, có thể ống kính camera của chị em đang bị bám bụi mờ, hãy dùng khăn mềm lau sạch. Thứ hai, chị em đang đứng quá xa hoặc quá gần mã QR, hãy điều chỉnh khoảng cách tầm 20-30cm sao cho mã QR nằm trọn trong ô vuông hướng dẫn. Thứ ba, nếu camera mặc định không hỗ trợ quét, chị em hãy mở Zalo, nhấp vào biểu tượng dấu cộng (+) ở góc trên bên phải và chọn "Quét mã QR".
+                </p>
+              </div>
+            </li>
+
+            <li class="accordion-item" id="faq-item-3">
+              <div class="accordion-header">
+                <h4>Kết nối mạng báo "Không có internet" thì tôi phải làm sao?</h4>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  Điều này có nghĩa là điện thoại đã kết nối với cục phát Wifi nhưng cục phát đó đang mất đường truyền từ nhà mạng ngoài. Chị em hãy thử tắt Wifi trên điện thoại và bật lại, hoặc thử di chuyển đến gần cục phát Wifi hơn. Nếu vẫn không được, chị em nên chuyển sang sử dụng dữ liệu di động 4G để tiếp tục việc học tập và tra cứu.
+                </p>
+              </div>
+            </li>
+
+          </ul>
+        </section>
+
+      </main>
+
+      <!-- 6. SIDEBAR BÀI HỌC LIÊN QUAN -->
+      <aside class="detail-sidebar" id="skills-sidebar">
+        
+        <!-- Widget 1: Danh sách các bài học kỹ năng số liên quan khác -->
+        <div class="sidebar-widget" id="widget-related-skills">
+          <h4 class="sidebar-widget-title">Bài học công nghệ khác</h4>
+          <ul class="related-items-list">
+            
+            <li>
+              <a href="kynangso-baomat.html" class="related-item-link">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80" alt="Bảo mật internet an toàn" class="related-item-img">
+                <div>
+                  <h5 class="related-item-title">Bài 2: Tạo mật khẩu an toàn tránh lừa đảo mạng</h5>
+                  <span class="related-item-meta">4 bài học • Bảo mật</span>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="kynangso-ketnoi.html" class="related-item-link">
+                <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=150&q=80" alt="Sử dụng Zalo Facebook" class="related-item-img">
+                <div>
+                  <h5 class="related-item-title">Bài 3: Cách gọi video nói chuyện Zalo miễn phí</h5>
+                  <span class="related-item-meta">6 bài học • Mạng xã hội</span>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="kynangso-thuongmai.html" class="related-item-link">
+                <img src="https://images.unsplash.com/photo-1556742044-3c52d6e88c62?auto=format&fit=crop&w=150&q=80" alt="Bán hàng online nông sản" class="related-item-img">
+                <div>
+                  <h5 class="related-item-title">Bài 6: Chụp ảnh nông sản sạch bằng điện thoại</h5>
+                  <span class="related-item-meta">6 bài học • Kinh doanh số</span>
+                </div>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+
+        <!-- Widget 2: Cán bộ hỗ trợ công nghệ trực tiếp tại bản -->
+        <div class="sidebar-widget support-widget" id="widget-skills-support">
+          <h4 class="sidebar-widget-title" style="border-left-color: var(--color-primary);">Gặp khó khăn công nghệ?</h4>
+          <p style="font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: 15px;">
+            Nếu thực hành các bước trên điện thoại gặp khó khăn hoặc không thực hiện được, chị em đừng ngần ngại mang máy ra điểm sinh hoạt nhà văn hóa xã để được các bạn thanh niên hướng dẫn trực tiếp:
+          </p>
+          <div class="support-people">
+            
+            <div class="person-card">
+              <div class="person-avatar">T</div>
+              <div class="person-info">
+                <span class="person-name">Em Giàng A Tủa</span>
+                <span class="person-role">Đội trưởng Thanh niên tình nguyện xã (SĐT: 0914.xxx.xxx)</span>
+              </div>
+            </div>
+
+            <div class="person-card">
+              <div class="person-avatar" style="background-color: var(--color-accent);">L</div>
+              <div class="person-info">
+                <span class="person-name">Chị Lò Thị Mai</span>
+                <span class="person-role">Phụ trách lớp kỹ năng số cộng đồng (SĐT: 0989.xxx.xxx)</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- ==========================================
+       SITE FOOTER (CHÂN TRANG HIỆN ĐẠI)
+       ========================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Cột Giới thiệu ngắn -->
+        <div class="footer-info-col">
+          <h4 class="footer-title">CẨM NANG SỐ CỘNG ĐỒNG</h4>
+          <p style="font-size: 0.95rem; line-height: 1.6; color: #A3B8AD;">
+            Nền tảng tri thức số nội bộ hỗ trợ phụ nữ nâng cao kỹ năng cuộc sống, tự bảo vệ trước pháp luật và tiếp cận thương mại điện tử phục vụ phát triển kinh tế gia đình bền vững.
+          </p>
+        </div>
+
+        <!-- Cột Bản đồ liên kết nhanh -->
+        <div class="footer-links-col">
+          <h4 class="footer-title">DANH MỤC TÀI LIỆU</h4>
+          <ul class="footer-links">
+            <li><a href="phapluat.html" class="footer-link">Pháp luật & Đời sống</a></li>
+            <li><a href="duan.html" class="footer-link">Dự án & Nhật ký cộng đồng</a></li>
+            <li><a href="kynangso.html" class="footer-link">Thư viện Kỹ năng công nghệ</a></li>
+            <li><a href="../index.html" class="footer-link">Trang chủ cẩm nang</a></li>
+          </ul>
+        </div>
+
+        <!-- Cột Liên hệ hỗ trợ khẩn cấp -->
+        <div class="footer-contact-col">
+          <h4 class="footer-title">HỖ TRỢ PHỤ NỮ</h4>
+          <div class="footer-contact-info">
+            <div class="contact-item">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              <span>Văn phòng Hội Liên hiệp Phụ nữ Huyện & Điểm sinh hoạt văn hóa bản</span>
+            </div>
+            
+            <div class="emergency-card">
+              <span style="font-size: 0.85rem; text-transform: uppercase; font-weight: 700; color: #FBBF24; display: block; margin-bottom: 5px;">
+                ĐƯỜNG DÂY NÓNG HỖ TRỢ KHẨN CẤP
+              </span>
+              <a href="tel:1900969680" class="emergency-phone">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.58l2.2-2.21c.28-.27.36-.66.25-1.01-.36-1.11-.56-2.3-.56-3.53 0-.55-.45-1-1-1H4.01c-.55 0-1 .45-1 1 0 9.39 7.63 17 17 17 .55 0 1-.45 1-1v-3.58c0-.55-.45-1-1-1z"/></svg>
+                1900 969 680
+              </a>
+              <span style="font-size: 0.8rem; color: #C6D5CD; display: block; margin-top: 5px; line-height: 1.3;">
+                (Tổng đài hỗ trợ pháp lý và bảo vệ phụ nữ & trẻ em 24/7)
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Chân trang bản quyền -->
+      <div class="footer-bottom">
+        <p>&copy; 2026 Cổng thông tin Cẩm nang số Bình đẳng giới vùng cao. Thiết kế chạy offline hoàn hảo cho cơ sở xã/bản.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       SCRIPTS ĐIỀU KHIỂN HOẠT ĐỘNG
+       ========================================== -->
+  <script src="../js/navbar.js"></script>
+  <script src="../js/animation.js"></script>
+  
+  <!-- JAVASCRIPT ĐÓNG MỞ ACCORDION FAQ CHO BÀI HỌC -->
+  <script src="../js/accordion.js"></script>
+
+  <!-- JAVASCRIPT HỖ TRỢ ĐỌC (TĂNG GIẢM CỠ CHỮ BÀI VIẾT) & ĐÁNH DẤU HOÀN THÀNH -->
+  <script src="../js/detail.js"></script>
+  
+  <!-- HỘP THOẠI LIGHTBOX PHÓNG TO ẢNH HÌNH MINH HỌA -->
+  <script src="../js/modal.js"></script>
+</body>
+</html>

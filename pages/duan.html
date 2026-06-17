@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nhật ký các phong trào cộng đồng, hoạt động hỗ trợ phụ nữ khởi nghiệp và các tấm gương truyền cảm hứng vùng cao.">
+  <title>Dự án & Hoạt động cộng đồng - Cẩm nang số</title>
+  
+  <!-- Font chữ Lexend hiện đại, cực kỳ dễ đọc qua Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Liên kết các file CSS hệ thống (Đường dẫn tương đối cấp 2) -->
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/duan.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       HEADER & THANH ĐIỀU HƯỚNG STICKY
+       ========================================== -->
+  <header class="site-header" id="site-header">
+    <div class="container navbar-container">
+      
+      <!-- LOGO HỆ THỐNG -->
+      <a href="../index.html" class="brand-logo" id="logo-main">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 19.4c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l1.9-1.9C9.22 19.58 10.57 20 12 20c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 15c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6zm-1-9h2v2h-2zm0 4h2v2h-2z"/>
+        </svg>
+        <div class="brand-text">
+          <span class="brand-title">CẨM NANG SỐ</span>
+          <span class="brand-subtitle">Bình đẳng & Công nghệ vùng sâu</span>
+        </div>
+      </a>
+
+      <!-- MENU ĐIỀU HƯỚNG TRÊN DESKTOP -->
+      <nav class="nav-menu" aria-label="Menu điều hướng chính">
+        <a href="../index.html" class="nav-link" id="nav-home">Trang chủ</a>
+        <a href="phapluat.html" class="nav-link" id="nav-law">Pháp luật</a>
+        <a href="duan.html" class="nav-link active" id="nav-project">Dự án</a>
+        <a href="kynangso.html" class="nav-link" id="nav-skills">Kỹ năng số</a>
+        <a href="game-luadao.html" class="nav-link" id="nav-game">Trò chơi</a>
+      </nav>
+
+      <!-- ĐIỀU KHIỂN TRÊN MOBILE (HAMBURGER & SEARCH GIAO DIỆN) -->
+      <div class="mobile-controls">
+        <!-- Ô tìm kiếm nhanh giao diện -->
+        <div class="search-container">
+          <input type="text" placeholder="Tìm kiếm dự án..." class="search-input" aria-label="Tìm kiếm dự án">
+          <button class="search-icon-btn" aria-label="Nút Tìm kiếm">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+            </svg>
+          </button>
+        </div>
+
+        <button class="hamburger-btn" id="hamburger-toggle" aria-label="Mở menu di động">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- BACKGROUND OVERLAY KHI MỞ MENU MOBILE -->
+  <div class="mobile-nav-overlay" id="mobile-overlay"></div>
+
+  <!-- MENU MOBILE DRAWER (MỞ TRƯỢT SANG) -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <div class="search-container">
+      <input type="text" placeholder="Tìm kiếm dự án..." class="search-input" aria-label="Tìm kiếm dự án di động">
+      <button class="search-icon-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+        </svg>
+      </button>
+    </div>
+    
+    <ul class="mobile-drawer-menu">
+      <li>
+        <a href="../index.html" class="mobile-drawer-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+          Trang chủ
+        </a>
+      </li>
+      <li>
+        <a href="phapluat.html" class="mobile-drawer-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+          Pháp luật & Đời sống
+        </a>
+      </li>
+      <li>
+        <a href="duan.html" class="mobile-drawer-link active">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 8 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+          Dự án cộng đồng
+        </a>
+      </li>
+      <li>
+        <a href="kynangso.html" class="mobile-drawer-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/></svg>
+          Kỹ năng công nghệ
+        </a>
+      </li>
+      <li>
+        <a href="game-luadao.html" class="mobile-drawer-link">
+          Trò chơi
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- ==========================================
+       MAIN CONTENT AREA
+       ========================================== -->
+  <main>
+    
+    <!-- BANNER CHUYÊN MỤC LỚN -->
+    <section class="hub-banner" id="project-hub-banner">
+      <div class="container">
+        <h1 id="project-main-heading">Dự án & Hoạt động cộng đồng</h1>
+        <p>Theo dõi hoạt động thực tế, nhật ký các chuyến đi và các chính sách hỗ trợ phát triển kinh tế thiết thực cho phụ nữ vùng cao.</p>
+      </div>
+    </section>
+
+    <section class="py-5" id="project-hub-body">
+      <div class="container">
+        
+        <!-- BỘ LỌC THỂ LOẠI NHANH -->
+        <div class="filters-container" id="project-filters">
+          <button class="filter-btn active" onclick="filterProject('all', this)" id="filter-proj-all">Tất cả hoạt động</button>
+          <button class="filter-btn" onclick="filterProject('community', this)" id="filter-proj-comm">Dự án cộng đồng</button>
+          <button class="filter-btn" onclick="filterProject('women', this)" id="filter-proj-women">Hỗ trợ phụ nữ</button>
+          <button class="filter-btn" onclick="filterProject('diary', this)" id="filter-proj-diary">Nhật ký hoạt động</button>
+          <button class="filter-btn" onclick="filterProject('policy', this)" id="filter-proj-policy">Chính sách hỗ trợ</button>
+          <button class="filter-btn" onclick="filterProject('inspire', this)" id="filter-proj-inspire">Câu chuyện truyền cảm hứng</button>
+        </div>
+
+        <!-- DANH SÁCH CARD PHÂN HỆ DỰ ÁN -->
+        <div class="card-grid" id="project-cards-list">
+          
+          <!-- Card 1: Dự án cộng đồng -->
+          <div class="reveal hover-grow" data-category="community" id="card-proj-comm">
+            <article class="card project-card-item">
+              <div class="project-card-img-wrapper">
+                <span class="project-status-badge status-active">Đang triển khai</span>
+                <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=600&q=80" alt="Dự án tủ sách và nhà văn hóa cộng đồng">
+              </div>
+              <div class="project-card-body">
+                <div class="project-badge-group">
+                  <span class="project-type-badge badge-community">Dự án cộng đồng</span>
+                </div>
+                <h3 class="project-title-link">
+                  <a href="duan-detail.html" class="stretched-link">Dự án xây dựng "Tủ sách cộng đồng & Điểm số hóa bản làng"</a>
+                </h3>
+                <p style="color: var(--color-text-muted); font-size: 0.95rem; margin-bottom: 0;">
+                  Thiết lập các tủ sách luật, bàn trải nghiệm máy tính và internet tốc độ cao tại nhà văn hóa bản để đồng bào dễ dàng đến tìm kiếm thông tin và tự học kỹ năng số.
+                </p>
+              </div>
+              <div class="project-card-footer">
+                <div style="display: flex; align-items: center;">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                  <span>Bản Hốc, Huyện Trạm Tấu</span>
+                </div>
+                <span style="font-weight: 700; color: var(--color-primary);" id="btn-read-proj-comm">Xem nhật ký &rarr;</span>
+              </div>
+            </article>
+          </div>
+
+          <!-- Card 2: Hoạt động hỗ trợ phụ nữ -->
+          <div class="reveal hover-grow delay-100" data-category="women" id="card-proj-women">
+            <article class="card project-card-item">
+              <div class="project-card-img-wrapper">
+                <span class="project-status-badge status-active">Đang diễn ra</span>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHgYK0oHs16W7xG6ZZY3vtKFTS93YXavVZLuo7NmILY1E7dcNNnlADyWg&s=10" alt="Đào tạo nghề dệt thổ cẩm">
+              </div>
+              <div class="project-card-body">
+                <div class="project-badge-group">
+                  <span class="project-type-badge badge-women">Hỗ trợ phụ nữ</span>
+                </div>
+                <h3 class="project-title-link">
+                  <a href="duan-hotrosinhke.html" class="stretched-link">Hoạt động hỗ trợ dệt thổ cẩm & Tạo sinh kế bền vững</a>
+                </h3>
+                <p style="color: var(--color-text-muted); font-size: 0.95rem; margin-bottom: 0;">
+                  Liên kết với các nghệ nhân đào tạo nâng cao tay nghề dệt truyền thống, đồng thời hỗ trợ kết nối đầu ra tiêu thụ, đưa sản phẩm lên các sàn thương mại điện tử.
+                </p>
+              </div>
+              <div class="project-card-footer">
+                <div style="display: flex; align-items: center;">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                  <span>Xã Sa Pa, Tỉnh Lào Cai</span>
+                </div>
+                <span style="font-weight: 700; color: var(--color-primary);" id="btn-read-proj-women">Xem nhật ký &rarr;</span>
+              </div>
+            </article>
+          </div>
+
+          <!-- Card 3: Nhật ký hoạt động -->
+          <div class="reveal hover-grow" data-category="diary" id="card-proj-diary">
+            <article class="card project-card-item">
+              <div class="project-card-img-wrapper">
+                <span class="project-status-badge status-completed">Hoàn thành</span>
+                <img src="https://media.thuonghieucongluan.vn/uploads/2022/12/12/318131150-1316613772213013-7406241561577940955-n-1670851964.jpg" alt="Chuyến đi thiện nguyện và hướng dẫn smartphone">
+              </div>
+              <div class="project-card-body">
+                <div class="project-badge-group">
+                  <span class="project-type-badge badge-diary">Nhật ký hoạt động</span>
+                </div>
+                <h3 class="project-title-link">
+                  <a href="duan-caidatzalo.html" class="stretched-link">Nhật ký: Chuyến đi hướng dẫn cài đặt Zalo, VNeID tại Xã vùng cao</a>
+                </h3>
+                <p style="color: var(--color-text-muted); font-size: 0.95rem; margin-bottom: 0;">
+                  Ghi lại hình ảnh chân thực, câu chuyện xúc động trong chuyến hành trình 3 ngày đêm của đoàn thanh niên tình nguyện cầm tay chỉ việc hướng dẫn smartphone cho 150 phụ nữ.
+                </p>
+              </div>
+              <div class="project-card-footer">
+                <div style="display: flex; align-items: center;">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                  <span>Xã Y Tý, Huyện Bát Xát</span>
+                </div>
+                <span style="font-weight: 700; color: var(--color-primary);" id="btn-read-proj-diary">Xem nhật ký &rarr;</span>
+              </div>
+            </article>
+          </div>
+
+          <!-- Card 4: Chính sách hỗ trợ -->
+          <div class="reveal hover-grow delay-100" data-category="policy" id="card-proj-policy">
+            <article class="card project-card-item">
+              <div class="project-card-img-wrapper">
+                <span class="project-status-badge status-active">Đang áp dụng</span>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRaoG4PKGvT5S5xNQWJ6EMWUj-8yeJL9X3HknZHLAqR1X17tjAnQZT980&s=10" alt="Hội phụ nữ hỗ trợ cây giống nuôi trồng">
+              </div>
+              <div class="project-card-body">
+                <div class="project-badge-group">
+                  <span class="project-type-badge badge-policy">Chính sách hỗ trợ</span>
+                </div>
+                <h3 class="project-title-link">
+                  <a href="duan-hotronuoilon.html" class="stretched-link">Chương trình hỗ trợ vốn vay không lãi suất nuôi lợn đen</a>
+                </h3>
+                <p style="color: var(--color-text-muted); font-size: 0.95rem; margin-bottom: 0;">
+                  Chi tiết cách thức đăng ký nhận gói hỗ trợ kinh tế bao gồm 3 con lợn đen giống và tài trợ 100% thức ăn chăn nuôi giai đoạn đầu từ quỹ Hội Phụ nữ.
+                </p>
+              </div>
+              <div class="project-card-footer">
+                <div style="display: flex; align-items: center;">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                  <span>Huyện Mù Cang Chải</span>
+                </div>
+                <span style="font-weight: 700; color: var(--color-primary);" id="btn-read-proj-policy">Xem nhật ký &rarr;</span>
+              </div>
+            </article>
+          </div>
+
+          <!-- Card 5: Câu chuyện truyền cảm hứng -->
+          <div class="reveal hover-grow" data-category="inspire" id="card-proj-inspire">
+            <article class="card project-card-item">
+              <div class="project-card-img-wrapper">
+                <span class="project-status-badge status-completed">Gương sáng</span>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7CwYYbFUDnVDCOU-oswwJGDQX9vaDtNLG7Y-XhREfCZh0y9ug7I6DcBGY&s=10" alt="Chân dung gương sáng phụ nữ khởi nghiệp">
+              </div>
+              <div class="project-card-body">
+                <div class="project-badge-group">
+                  <span class="project-type-badge badge-inspire">Truyền cảm hứng</span>
+                </div>
+                <h3 class="project-title-link">
+                  <a href="duan-giangthimy.html" class="stretched-link">Câu chuyện chị Giàng Thị Mỷ làm giàu từ cây sa mộc</a>
+                </h3>
+                <p style="color: var(--color-text-muted); font-size: 0.95rem; margin-bottom: 0;">
+                  Hành trình vươn lên thoát nghèo đầy nghị lực của người mẹ 3 con dân tộc Mông, tự học tiếng phổ thông, dùng Facebook để quảng bá gỗ và homestay đến du khách.
+                </p>
+              </div>
+              <div class="project-card-footer">
+                <div style="display: flex; align-items: center;">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                  <span>Bản Cát Cát, Sa Pa</span>
+                </div>
+                <span style="font-weight: 700; color: var(--color-primary);" id="btn-read-proj-inspire">Xem nhật ký &rarr;</span>
+              </div>
+            </article>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================
+       SITE FOOTER (CHÂN TRANG HIỆN ĐẠI)
+       ========================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Cột Giới thiệu ngắn -->
+        <div class="footer-info-col">
+          <h4 class="footer-title">CẨM NANG SỐ CỘNG ĐỒNG</h4>
+          <p style="font-size: 0.95rem; line-height: 1.6; color: #A3B8AD;">
+            Nền tảng tri thức số nội bộ hỗ trợ phụ nữ nâng cao kỹ năng cuộc sống, tự bảo vệ trước pháp luật và tiếp cận thương mại điện tử phục vụ phát triển kinh tế gia đình bền vững.
+          </p>
+        </div>
+
+        <!-- Cột Bản đồ liên kết nhanh -->
+        <div class="footer-links-col">
+          <h4 class="footer-title">DANH MỤC TÀI LIỆU</h4>
+          <ul class="footer-links">
+            <li><a href="phapluat.html" class="footer-link">Pháp luật & Đời sống</a></li>
+            <li><a href="duan.html" class="footer-link">Dự án & Nhật ký cộng đồng</a></li>
+            <li><a href="kynangso.html" class="footer-link">Thư viện Kỹ năng công nghệ</a></li>
+            <li><a href="../index.html" class="footer-link">Trang chủ cẩm nang</a></li>
+          </ul>
+        </div>
+
+        <!-- Cột Liên hệ hỗ trợ khẩn cấp -->
+        <div class="footer-contact-col">
+          <h4 class="footer-title">HỖ TRỢ PHỤ NỮ</h4>
+          <div class="footer-contact-info">
+            <div class="contact-item">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              <span>Văn phòng Hội Liên hiệp Phụ nữ Huyện & Điểm sinh hoạt văn hóa bản</span>
+            </div>
+            
+            <div class="emergency-card">
+              <span style="font-size: 0.85rem; text-transform: uppercase; font-weight: 700; color: #FBBF24; display: block; margin-bottom: 5px;">
+                ĐƯỜNG DÂY NÓNG HỖ TRỢ KHẨN CẤP
+              </span>
+              <a href="tel:1900969680" class="emergency-phone">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.58l2.2-2.21c.28-.27.36-.66.25-1.01-.36-1.11-.56-2.3-.56-3.53 0-.55-.45-1-1-1H4.01c-.55 0-1 .45-1 1 0 9.39 7.63 17 17 17 .55 0 1-.45 1-1v-3.58c0-.55-.45-1-1-1z"/></svg>
+                1900 969 680
+              </a>
+              <span style="font-size: 0.8rem; color: #C6D5CD; display: block; margin-top: 5px; line-height: 1.3;">
+                (Tổng đài hỗ trợ pháp lý và bảo vệ phụ nữ & trẻ em 24/7)
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Chân trang bản quyền -->
+      <div class="footer-bottom">
+        <p>&copy; 2026 Cổng thông tin Cẩm nang số Bình đẳng giới vùng cao. Thiết kế chạy offline hoàn hảo cho cơ sở xã/bản.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       SCRIPTS ĐIỀU KHIỂN HOẠT ĐỘNG
+       ========================================== -->
+  <script src="../js/navbar.js"></script>
+  <script src="../js/animation.js"></script>
+  <script src="../js/search.js"></script>
+  
+  <!-- Lọc dự án client-side bằng JS phụ trợ -->
+  <script>
+    function filterProject(category, buttonEl) {
+      // Đổi class active cho nút bấm
+      const buttons = document.querySelectorAll('.filter-btn');
+      buttons.forEach(btn => btn.classList.remove('active'));
+      buttonEl.classList.add('active');
+
+      // Lọc các card
+      const cards = document.querySelectorAll('[data-category]');
+      cards.forEach(card => {
+        if (category === 'all' || card.getAttribute('data-category') === category) {
+          card.style.display = '';
+          // Reset style phục vụ hoạt ảnh trượt
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      // Ẩn thông báo không tìm thấy kết quả nếu có
+      const noResultsMsg = document.querySelector('.no-results-msg');
+      const cardsContainer = document.querySelector('.card-grid');
+      if (noResultsMsg) {
+        noResultsMsg.style.display = 'none';
+        cardsContainer.style.display = '';
+      }
+    }
+  </script>
+</body>
+</html>
