@@ -1,0 +1,466 @@
+/* ==========================================================================
+   CSS CHO MINI-GAME "LẬT TẤY LỪA ĐẢO" - PHẦN STYLING RIÊNG
+   ========================================================================== */
+
+/* ============================================
+   PHẦN MAIN CONTENT
+   ============================================ */
+main {
+  flex: 1;
+  padding: 40px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 20px 12px;
+  }
+}
+
+/* ============================================
+   CARD GAME CHÍNH
+   ============================================ */
+.game-container {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-medium);
+  padding: 40px 32px;
+  max-width: 600px;
+  width: 100%;
+  animation: slideIn 0.4s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation rung lắc (khi chọn SAI) */
+.game-container.shake {
+  animation: shake 0.4s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-8px);
+  }
+  50% {
+    transform: translateX(8px);
+  }
+  75% {
+    transform: translateX(-8px);
+  }
+}
+
+/* ============================================
+   PHẦN HEADER
+   ============================================ */
+.game-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.game-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--color-primary-dark);
+  margin-bottom: 8px;
+}
+
+.game-subtitle {
+  font-size: 15px;
+  color: var(--color-text-muted);
+  margin-bottom: 20px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: rgba(44, 107, 78, 0.1);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-primary), #5da56a);
+  transition: width 0.3s ease;
+  border-radius: var(--radius-pill);
+}
+
+/* ============================================
+   PHẦN NỘI DUNG CÂU HỎI
+   ============================================ */
+.question-section {
+  margin: 24px 0;
+}
+
+.question-number {
+  font-size: 13px;
+  color: var(--color-primary);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+.question-text {
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--color-text-main);
+  margin-bottom: 24px;
+  padding: 20px;
+  background-color: var(--color-primary-light);
+  border-left: 4px solid var(--color-primary);
+  border-radius: var(--radius-sm);
+}
+
+/* ============================================
+   PHẦN NÚT CHỌN
+   ============================================ */
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 28px 0;
+}
+
+.btn-choice {
+  padding: 16px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: var(--shadow-subtle);
+}
+
+/* Nút TIN CẬY (ĐÚNG) */
+.btn-trust {
+  background-color: var(--color-primary);
+  color: var(--bg-secondary);
+}
+
+.btn-trust:hover:not(:disabled) {
+  background-color: var(--color-primary-dark);
+  box-shadow: var(--shadow-medium);
+  transform: translateY(-2px);
+}
+
+.btn-trust:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+/* Nút LỪA ĐẢO (SAI) */
+.btn-fake {
+  background-color: var(--color-danger);
+  color: var(--bg-secondary);
+}
+
+.btn-fake:hover:not(:disabled) {
+  background-color: #B91C1C;
+  box-shadow: var(--shadow-medium);
+  transform: translateY(-2px);
+}
+
+.btn-fake:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+/* Nút DISABLED (khi đã chọn) */
+.btn-choice:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* ============================================
+   MODAL POPUP
+   ============================================ */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  animation: fadeIn 0.3s ease;
+  padding: 16px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal-content {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  padding: 32px 28px;
+  text-align: center;
+  max-width: 380px;
+  width: 100%;
+  animation: popIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  border-left: 5px solid;
+  box-shadow: var(--shadow-large);
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Modal Chúc mừng (ĐÚNG) */
+.modal-success {
+  border-left-color: var(--color-primary);
+}
+
+.modal-success .modal-icon {
+  font-size: 56px;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.modal-success .modal-title {
+  color: var(--color-primary);
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.modal-success .modal-message {
+  color: var(--color-text-main);
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Modal Cảnh báo (SAI) */
+.modal-warning {
+  border-left-color: var(--color-danger);
+}
+
+.modal-warning .modal-icon {
+  font-size: 56px;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.modal-warning .modal-title {
+  color: var(--color-danger);
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.modal-warning .modal-message {
+  color: var(--color-text-main);
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.modal-explanation {
+  background-color: var(--color-accent-light);
+  border-radius: var(--radius-sm);
+  padding: 14px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: var(--color-text-main);
+  font-style: italic;
+  border-left: 3px solid var(--color-accent);
+}
+
+.btn-next {
+  background-color: var(--color-primary);
+  color: var(--bg-secondary);
+  border: none;
+  padding: 14px 28px;
+  border-radius: var(--radius-sm);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  min-height: 48px;
+  box-shadow: var(--shadow-subtle);
+}
+
+.btn-next:hover {
+  background-color: var(--color-primary-dark);
+  box-shadow: var(--shadow-medium);
+  transform: translateY(-2px);
+}
+
+.btn-next:active {
+  transform: translateY(0);
+}
+
+/* ============================================
+   MÀN HÌNH KẾT THÚC
+   ============================================ */
+.result-screen {
+  text-align: center;
+}
+
+.result-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--color-primary-dark);
+  margin-bottom: 20px;
+}
+
+.result-score {
+  font-size: 64px;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin: 28px 0 12px;
+}
+
+.result-score-text {
+  font-size: 15px;
+  color: var(--color-text-muted);
+  margin-bottom: 28px;
+}
+
+.result-message {
+  background-color: var(--color-primary-light);
+  border-left: 4px solid var(--color-primary);
+  padding: 20px;
+  border-radius: var(--radius-sm);
+  color: var(--color-text-main);
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+.btn-restart {
+  background-color: var(--color-primary);
+  color: var(--bg-secondary);
+  border: none;
+  padding: 16px 32px;
+  border-radius: var(--radius-sm);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  min-height: 50px;
+  width: 100%;
+  box-shadow: var(--shadow-subtle);
+}
+
+.btn-restart:hover {
+  background-color: var(--color-primary-dark);
+  box-shadow: var(--shadow-medium);
+  transform: translateY(-2px);
+}
+
+.btn-restart:active {
+  transform: translateY(0);
+}
+
+/* ============================================
+   RESPONSIVE (Mobile-first)
+   ============================================ */
+@media (max-width: 480px) {
+  .game-container {
+    padding: 24px 16px;
+    border-radius: var(--radius-sm);
+  }
+
+  .game-title {
+    font-size: 22px;
+  }
+
+  .game-subtitle {
+    font-size: 14px;
+  }
+
+  .question-text {
+    font-size: 15px;
+    padding: 16px;
+  }
+
+  .btn-choice {
+    padding: 14px 16px;
+    font-size: 14px;
+    min-height: 48px;
+  }
+
+  .modal-content {
+    max-width: 320px;
+    padding: 24px 20px;
+  }
+
+  .result-score {
+    font-size: 48px;
+  }
+}
+
+@media (min-width: 768px) {
+  .game-container {
+    padding: 48px 40px;
+  }
+
+  main {
+    padding: 60px 20px;
+  }
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+.hidden {
+  display: none !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+footer {
+  background-color: var(--color-primary-dark);
+  color: var(--bg-secondary);
+  padding: 40px 20px;
+  text-align: center;
+  margin-top: auto;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
