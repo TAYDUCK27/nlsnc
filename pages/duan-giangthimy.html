@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Câu chuyện gương sáng làm kinh tế giỏi - Chị Giàng Thị Mỷ biến đồi trọc thành rừng sa mộc xanh tốt, mở ra hướng đi thoát nghèo bền vững cho bản làng vùng cao.">
+  <title>Chi tiết Dự án cộng đồng - Cẩm nang số</title>
+  
+  <!-- Font chữ Lexend hiện đại, cực kỳ dễ đọc qua Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Liên kết các file CSS hệ thống (Đường dẫn tương đối cấp 2) -->
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/detail.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       HEADER & THANH ĐIỀU HƯỚNG STICKY
+       ========================================== -->
+  <header class="site-header" id="site-header">
+    <div class="container navbar-container">
+      
+      <!-- LOGO HỆ THỐNG -->
+      <a href="../index.html" class="brand-logo" id="logo-main">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 19.4c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l1.9-1.9C9.22 19.58 10.57 20 12 20c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 15c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6zm-1-9h2v2h-2zm0 4h2v2h-2z"/>
+        </svg>
+        <div class="brand-text">
+          <span class="brand-title">CẨM NANG SỐ</span>
+          <span class="brand-subtitle">Bình đẳng & Công nghệ vùng sâu</span>
+        </div>
+      </a>
+
+      <!-- MENU ĐIỀU HƯỚNG TRÊN DESKTOP -->
+      <nav class="nav-menu" aria-label="Menu điều hướng chính">
+        <a href="../index.html" class="nav-link" id="nav-home">Trang chủ</a>
+        <a href="phapluat.html" class="nav-link" id="nav-law">Pháp luật</a>
+        <a href="duan.html" class="nav-link active" id="nav-project">Dự án</a>
+        <a href="kynangso.html" class="nav-link" id="nav-skills">Kỹ năng số</a>
+        <a href="game-luadao.html" class="nav-link" id="nav-game">Trò chơi</a>
+      </nav>
+
+      <!-- ĐIỀU KHIỂN TRÊN MOBILE (HAMBURGER & SEARCH GIAO DIỆN) -->
+      <div class="mobile-controls">
+        <div class="search-container">
+          <input type="text" placeholder="Tìm kiếm dự án..." class="search-input" aria-label="Tìm kiếm dự án">
+          <button class="search-icon-btn" aria-label="Nút Tìm kiếm">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+            </svg>
+          </button>
+        </div>
+
+        <button class="hamburger-btn" id="hamburger-toggle" aria-label="Mở menu di động">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- BACKGROUND OVERLAY KHI MỞ MENU MOBILE -->
+  <div class="mobile-nav-overlay" id="mobile-overlay"></div>
+
+  <!-- MENU MOBILE DRAWER (MỞ TRƯỢT SANG) -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <div class="search-container">
+      <input type="text" placeholder="Tìm kiếm dự án..." class="search-input" aria-label="Tìm kiếm dự án di động">
+      <button class="search-icon-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+        </svg>
+      </button>
+    </div>
+    
+    <ul class="mobile-drawer-menu">
+      <li>
+        <a href="../index.html" class="mobile-drawer-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+          Trang chủ
+        </a>
+      </li>
+      <li>
+        <a href="phapluat.html" class="mobile-drawer-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+          Pháp luật & Đời sống
+        </a>
+      </li>
+      <li>
+        <a href="duan.html" class="mobile-drawer-link active">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 8 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+          Dự án cộng đồng
+        </a>
+      </li>
+      <li>
+        <a href="kynangso.html" class="mobile-drawer-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/></svg>
+          Kỹ năng công nghệ
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- ==========================================
+       1. BANNER DỰ ÁN CHI TIẾT
+       ========================================== -->
+  <section class="detail-hero-banner" id="project-detail-hero" style="background-image: linear-gradient(to bottom, rgba(34, 76, 56, 0.4) 0%, rgba(19, 42, 31, 0.95) 100%), url('https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=80');">
+    <div class="container">
+      <h1 id="project-detail-title">Gương sáng vùng cao: Chị Giàng Thị Mỷ làm giàu từ cây sa mộc</h1>
+      <p class="detail-short-desc">
+        Hành trình đầy nghị lực của người phụ nữ Mông biến những vạt đồi trọc cằn cỗi thành rừng gỗ quý trị giá hàng tỷ đồng, lan tỏa tư duy phủ xanh đất trống cho bà con.[cite: 1]
+      </p>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       BỐ CỤC CHÍNH HAI CỘT
+       ========================================== -->
+  <div class="container py-5">
+    <div class="detail-layout-container">
+      
+      <!-- CỘT NỘI DUNG CHÍNH (MAIN ARTICLE CONTENT) -->
+      <main class="article-body" id="project-main-article">
+        
+        <!-- NÚT QUAY LẠI GÓC BÉ XINH -->
+        <a href="duan.html" class="btn-back-link" title="Quay lại trang Dự án">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+          </svg>
+        </a>
+        
+        <!-- 2. THANH TRỢ NĂNG HỖ TRỢ ĐỌC -->
+        <div class="reading-helper-bar" id="reading-assistant">
+          <div class="helper-title">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M9 4v3h5v12h3V7h5V4H9zm-6 6v3h3v6h3v-6h3v-3H3z"/>
+            </svg>
+            <span>TRỢ GIÚP ĐỌC: Hỗ trợ mắt người lớn tuổi</span>
+          </div>
+          <div class="resizer-controls">
+            <button class="resizer-btn" id="btn-font-decrease" title="Thu nhỏ chữ">Chữ Nhỏ</button>
+            <button class="resizer-btn" id="btn-font-reset" title="Đặt lại cỡ chữ">Cỡ Chuẩn</button>
+            <button class="resizer-btn" id="btn-font-increase" title="Phóng to chữ">Chữ Lớn</button>
+          </div>
+        </div>
+
+        <!-- 3. NỘI DUNG VĂN BẢN CHI TIẾT -->
+        <div class="article-text-content" id="article-text-placeholder">
+          <p>
+            Sinh ra và lớn lên ở vùng đất quanh năm mây phủ, cuộc sống của gia đình chị Giàng Thị Mỷ trước đây chỉ quanh quẩn bên cây ngô, cây lúa nương trên hốc đá, năm nào thời tiết thất bát là đói nghèo bủa vây[cite: 1]. Nhận thấy cây sa mộc (thông sam) là giống cây chịu được khô hạn, sương muối, sinh trưởng mạnh mẽ và cho chất lượng gỗ thẳng, bền đẹp rất được ưa chuộng, chị Mỷ đã táo bạo dồn toàn bộ tiền tiết kiệm để phủ xanh đồi trọc.
+          </p>
+
+          <h2>Bí quyết kiên trì phủ xanh đất trống</h2>
+          <p>
+            Để đi đến thành công ngày hôm nay, người phụ nữ nhỏ bé ấy đã phải vượt qua biết bao định kiến và khó khăn khắc nghiệt của thiên nhiên:
+          </p>
+          <ul>
+            <li><strong>Tự ươm con giống đạt chuẩn:</strong> Không có vốn mua cây giống số lượng lớn, chị tự đi thu lượm hạt sa mộc già về nghiên cứu cách ươm bầu đất đúng kỹ thuật tại vườn nhà, giúp tiết kiệm 70% chi phí ban đầu.</li>
+            <li><strong>Lấy ngắn nuôi dài:</strong> Trong những năm đầu khi cây sa mộc còn nhỏ, chị trồng xen canh cây sa nhân tím, gừng đá và chăn thả lợn đen dưới tán rừng để có nguồn thu nhập ngắn hạn trang trải cuộc sống[cite: 1].</li>
+            <li><strong>Ứng dụng công nghệ quản lý rừng:</strong> Nhờ tham gia lớp tập huấn kỹ năng số, chị Mỷ biết sử dụng điện thoại chụp ảnh, cập nhật tình hình sinh trưởng của rừng và kết nối trực tiếp với các xưởng gỗ lớn để bán giá cao, không bị ép giá qua thương lái.[cite: 1]</li>
+          </ul>
+
+          <div class="highlight-box">
+            <p><strong>Thành quả ngọt ngào:</strong></p>
+            <p>
+              Đến nay, gia đình chị Mỷ đã sở hữu hơn 7 hecta rừng sa mộc từ 8 - 12 năm tuổi. Mô hình này không chỉ mang lại thu nhập hàng trăm triệu đồng mỗi năm từ việc tỉa gỗ, mà quan trọng hơn là giữ đất, giữ nước cho toàn bộ hạ lưu bản làng.
+            </p>
+          </div>
+        </div>
+
+        <!-- 4. TIMELINE HOẠT ĐỘNG (DẠNG TRỰC QUAN ĐẸP MẮT) -->
+        <section class="timeline-section" id="project-timeline">
+          <h3>Hành trình 10 năm biến sỏi đá thành vàng xanh</h3>
+          <p style="font-size: 0.95rem; color: var(--color-text-muted);">
+            Các dấu mốc quan trọng trong quá trình lập nghiệp và lan tỏa mô hình trồng rừng của chị Giàng Thị Mỷ:[cite: 1]
+          </p>
+          
+          <div class="timeline">
+            
+            <!-- Mốc 1 -->
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <span class="timeline-date">Năm 2014 - 2016</span>
+              <div class="timeline-content">
+                <h4>Nhặt hạt gieo mầm trên đồi trọc</h4>
+                <p>
+                  Bị cho là "khùng" khi mang cây thân gỗ lên trồng ở vùng đất dốc cằn cỗi, chị Mỷ vẫn âm thầm vác cuốc khai hoang, trồng thành công 1.500 cây sa mộc đầu tiên.
+                </p>
+              </div>
+            </div>
+
+            <!-- Mốc 2 -->
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <span class="timeline-date">Năm 2018 - 2020</span>
+              <div class="timeline-content">
+                <h4>Phát triển mô hình xen canh dưới tán rừng</h4>
+                <p>
+                  Đàn lợn thả hoang và đồi sa nhân tím dưới tán cây bắt đầu cho thu hoạch ổn định[cite: 1]. Chị có thêm vốn để mở rộng diện tích trồng rừng lên gấp ba lần.
+                </p>
+              </div>
+            </div>
+
+            <!-- Mốc 3 -->
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <span class="timeline-date">Năm 2023</span>
+              <div class="timeline-content">
+                <h4>Khai thác lứa gỗ đầu tiên & Đón nhận bằng khen</h4>
+                <p>
+                  Lứa sa mộc đầu tiên đạt chu vi chuẩn được xuất bán thẳng cho các công trình xây dựng. Chị vinh dự nhận bằng khen "Nông dân sản xuất kinh doanh giỏi" cấp tỉnh.
+                </p>
+              </div>
+            </div>
+
+            <!-- Mốc 4 -->
+            <div class="timeline-item">
+              <div class="timeline-dot active pulse-dot"></div>
+              <span class="timeline-date">Hiện tại (Năm 2026)</span>
+              <div class="timeline-content">
+                <h4>Thành lập tổ hợp tác, giúp đỡ 20 hộ nghèo</h4>
+                <p>
+                  Chị Mỷ chủ động cung cấp cây giống miễn phí và hướng dẫn kỹ thuật trồng sa mộc cho các chị em phụ nữ nghèo trong bản để cùng nhau phủ xanh quê hương, thoát nghèo bền vững.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- 5. GALLERY ẢNH PHÓNG SỰ DỰ ÁN (CLICK PHÓNG TO QUA LIGHTBOX) -->
+        <section class="gallery-section" id="project-photo-gallery">
+          <h3>Hình ảnh tư liệu về mô hình rừng sa mộc</h3>
+          <p style="font-size: 0.95rem; color: var(--color-text-muted); margin-bottom: 20px;">
+            Nhấp chuột vào hình ảnh bất kỳ để chiêm ngưỡng màu xanh bạt ngàn của rừng sa mộc:
+          </p>
+          
+          <div class="gallery-grid">
+            
+            <div class="gallery-item">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVv7QHF-FKlyC-AVK6jMWZtai0_0ctTeLlt7NCLuJzyNN7L6iZQQH8h1OT&s=10" alt="Những hàng cây sa mộc vươn thẳng tắp giữa làn sương mờ vùng cao" data-lightbox="true">
+              <p class="gallery-caption">Rừng sa mộc vươn cao trong nắng</p>
+            </div>
+
+            <div class="gallery-item">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbKgim4TA5uH0MTDgMpcSEhc7--NJAeadaDWzeTdwF48nB2E5YoMSS9ERk&s=10" alt="Chị Mỷ hướng dẫn chị em phụ nữ bản kỹ thuật chăm sóc cây non trong vườn ươm" data-lightbox="true">
+              <p class="gallery-caption">Ươm mầm xanh cho bản làng</p>
+            </div>
+
+            <div class="gallery-item">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPPWDLm3kGiomotYdsNUA_3wM-EvYov_cDIFm3saqFYQ&s" alt="Vạt đồi xanh ngút ngàn thay thế cho vùng đất dốc trọc xói mòn ngày trước" data-lightbox="true">
+              <p class="gallery-caption">Sức sống mới trên những vạt đồi</p>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- 6. VIDEO TRỰC QUAN GHI LẠI NHẬT KÝ HÀNH TRÌNH -->
+        <section class="video-section" id="project-video-diary">
+          <h3>Phóng sự VTV: Người thắp lửa xanh trên đại ngàn sa mộc</h3>
+          <div class="video-wrapper">
+            <iframe src="https://drive.google.com/file/d/1y16q5LWobssdHYLnRvr2YJxLif8q4khS/preview" title="Video câu chuyện Giàng Thị Mỷ làm giàu" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <p class="video-caption">Thước phim chân thực về nghị lực phi thường của chị Giàng Thị Mỷ do ban truyền hình tiếng dân tộc thực hiện.[cite: 1]</p>
+        </section>
+
+      </main>
+
+      <!-- 7. SIDEBAR NỘI DUNG LIÊN QUAN -->
+      <aside class="detail-sidebar" id="project-sidebar">
+        
+        <!-- Widget 1: Danh sách các dự án tiêu biểu khác -->
+        <div class="sidebar-widget" id="widget-other-projects">
+          <h4 class="sidebar-widget-title">Hoạt động sinh kế khác</h4>
+          <ul class="related-items-list">
+            
+            <li>
+              <a href="duan-hotrosinhke.html" class="related-item-link">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHgYK0oHs16W7xG6ZZY3vtKFTS93YXavVZLuo7NmILY1E7dcNNnlADyWg&s=10" alt="Hỗ trợ dệt thổ cẩm" class="related-item-img">
+                <div>
+                  <h5 class="related-item-title">Hoạt động hỗ trợ dệt thổ cẩm, tạo sinh kế bền vững</h5>
+                  <span class="related-item-meta">Đang hoạt động • Làng nghề</span>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="duan-hotronuoilon.html" class="related-item-link">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRaoG4PKGvT5S5xNQWJ6EMWUj-8yeJL9X3HknZHLAqR1X17tjAnQZT980&s=10" alt="Hỗ trợ nuôi lợn đen" class="related-item-img">
+                <div>
+                  <h5 class="related-item-title">Hỗ trợ vốn vay không lãi suất nuôi lợn đen bản địa</h5>
+                  <span class="related-item-meta">Đang triển khai • Tín dụng</span>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="duan-caidatzalo.html" class="related-item-link">
+                <img src="https://media.thuonghieucongluan.vn/uploads/2022/12/12/318131150-1316613772213013-7406241561577940955-n-1670851964.jpg" alt="Hướng dẫn công nghệ" class="related-item-img">
+                <div>
+                  <h5 class="related-item-title">Nhật ký: Hướng dẫn cài đặt Zalo, VNeID tại vùng cao</h5>
+                  <span class="related-item-meta">Đã hoàn thành • Kỹ năng công nghệ</span>
+                </div>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+
+        <!-- Widget 2: Cán bộ quản lý điểm số hóa bản làng -->
+        <div class="sidebar-widget support-widget" id="widget-project-manager">
+          <h4 class="sidebar-widget-title" style="border-left-color: var(--color-primary);">Liên hệ Tổ Hợp Tác</h4>
+          <p style="font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: 15px;">
+            Để đăng ký nhận cây giống sa mộc hỗ trợ hoặc tham quan học hỏi trực tiếp mô hình thâm canh mẫu của gia đình chị Mỷ, vui lòng liên hệ:
+          </p>
+          <div class="support-people">
+            
+            <div class="person-card">
+              <div class="person-avatar">M</div>
+              <div class="person-info">
+                <span class="person-name">Chị Giàng Thị Mỷ</span>
+                <span class="person-role">Trưởng nhóm liên kết trồng rừng Bản Hốc (SĐT: 0982.xxx.xxx)[cite: 1]</span>
+              </div>
+            </div>
+
+            <div class="person-card">
+              <div class="person-avatar" style="background-color: var(--color-accent);">V</div>
+              <div class="person-info">
+                <span class="person-name">Anh Kiểm Lâm Xã</span>
+                <span class="person-role">Hỗ trợ hồ sơ giao đất giao rừng (SĐT: 0945.xxx.xxx)</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- ==========================================
+       SITE FOOTER (CHÂN TRANG HIỆN ĐẠI)
+       ========================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Cột Giới thiệu ngắn -->
+        <div class="footer-info-col">
+          <h4 class="footer-title">CẨM NANG SỐ CỘNG ĐỒNG</h4>
+          <p style="font-size: 0.95rem; line-height: 1.6; color: #A3B8AD;">
+            Nền tảng tri thức số nội bộ hỗ trợ phụ nữ nâng cao kỹ năng cuộc sống, tự bảo vệ trước pháp luật và tiếp cận thương mại điện tử phục vụ phát triển kinh tế gia đình bền vững.
+          </p>
+        </div>
+
+        <!-- Cột Bản đồ liên kết nhanh -->
+        <div class="footer-links-col">
+          <h4 class="footer-title">DANH MỤC TÀI LIỆU</h4>
+          <ul class="footer-links">
+            <li><a href="phapluat.html" class="footer-link">Pháp luật & Đời sống</a></li>
+            <li><a href="duan.html" class="footer-link">Dự án & Nhật ký cộng đồng</a></li>
+            <li><a href="kynangso.html" class="footer-link">Thư viện Kỹ năng công nghệ</a></li>
+            <li><a href="../index.html" class="footer-link">Trang chủ cẩm nang</a></li>
+          </ul>
+        </div>
+
+        <!-- Cột Liên hệ hỗ trợ khẩn cấp -->
+        <div class="footer-contact-col">
+          <h4 class="footer-title">HỖ TRỢ PHỤ NỮ</h4>
+          <div class="footer-contact-info">
+            <div class="contact-item">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              <span>Văn phòng Hội Liên hiệp Phụ nữ Huyện & Điểm sinh hoạt văn hóa bản</span>
+            </div>
+            
+            <div class="emergency-card">
+              <span style="font-size: 0.85rem; text-transform: uppercase; font-weight: 700; color: #FBBF24; display: block; margin-bottom: 5px;">
+                ĐƯỜNG DÂY NÓNG HỖ TRỢ KHẨN CẤP
+              </span>
+              <a href="tel:1900969680" class="emergency-phone">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.58l2.2-2.21c.28-.27.36-.66.25-1.01-.36-1.11-.56-2.3-.56-3.53 0-.55-.45-1-1-1H4.01c-.55 0-1 .45-1 1 0 9.39 7.63 17 17 17 .55 0 1-.45 1-1v-3.58c0-.55-.45-1-1-1z"/></svg>
+                1900 969 680
+              </a>
+              <span style="font-size: 0.8rem; color: #C6D5CD; display: block; margin-top: 5px; line-height: 1.3;">
+                (Tổng đài hỗ trợ pháp lý và bảo vệ phụ nữ & trẻ em 24/7)
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Chân trang bản quyền -->
+      <div class="footer-bottom">
+        <p>&copy; 2026 Cổng thông tin Cẩm nang số Bình đẳng giới vùng cao. Thiết kế chạy offline hoàn hảo cho cơ sở xã/bản.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       SCRIPTS ĐIỀU KHIỂN HOẠT ĐỘNG
+       ========================================== -->
+  <script src="../js/navbar.js"></script>
+  <script src="../js/animation.js"></script>
+  
+  <!-- JAVASCRIPT HỖ TRỢ ĐỌC (TĂNG GIẢM CỠ CHỮ BÀI VIẾT) -->
+  <script src="../js/detail.js"></script>
+  
+  <!-- HỘP THOẠI LIGHTBOX PHÓNG TO ẢNH HOẠT ĐỘNG DỰ ÁN -->
+  <script src="../js/modal.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+/* ==========================================================================
+   CAM NANG SO BÌNH ĐẲNG GIỚI & KỸ NĂNG SỐ - PHÂN HỆ DỰ ÁN (PROJECT STYLES)
+   ========================================================================== */
+
+/* 1. BỐ CỤC THẺ DỰ ÁN (PROJECT CARDS LAYOUT) */
+.project-card-item {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0; /* Xóa padding mặc định của card để chèn ảnh tràn viền trên */
+  overflow: hidden;
+}
+
+.project-card-img-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+.project-card-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0; /* Bo tròn theo khung ngoài card */
+  transition: transform 0.4s ease;
+}
+
+.project-card-item:hover .project-card-img-wrapper img {
+  transform: scale(1.06);
+}
+
+.project-card-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* 2. NHÃN PHÂN LOẠI & TRẠNG THÁI (PROJECT BADGES) */
+.project-badge-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.project-type-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  border-radius: var(--radius-pill);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Các nhãn thể loại dự án */
+.badge-community { background-color: rgba(16, 185, 129, 0.12); color: #059669; }
+.badge-women { background-color: rgba(236, 72, 153, 0.12); color: #DB2777; }
+.badge-diary { background-color: rgba(59, 130, 246, 0.12); color: #2563EB; }
+.badge-policy { background-color: rgba(217, 119, 6, 0.12); color: #D97706; }
+.badge-inspire { background-color: rgba(139, 92, 246, 0.12); color: #7C3AED; }
+
+.project-status-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: var(--color-primary-dark);
+  color: #FFFFFF;
+  padding: 6px 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  z-index: 5;
+}
+
+.status-active { background-color: #059669; }
+.status-completed { background-color: var(--color-accent); }
+
+.project-title-link {
+  font-weight: 700;
+  line-height: 1.35;
+  margin-bottom: 12px;
+  transition: var(--transition-smooth);
+}
+
+.project-title-link a {
+  color: var(--color-primary-dark);
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+.project-card-item:hover .project-title-link a {
+  color: var(--color-accent);
+}
+
+.project-card-footer {
+  border-top: 1px solid rgba(44, 107, 78, 0.08);
+  padding: 16px 24px;
+  background-color: var(--color-primary-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.project-card-footer svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+  margin-right: 4px;
+}

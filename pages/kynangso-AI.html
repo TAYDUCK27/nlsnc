@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Chi tiết khóa học Trí tuệ nhân tạo AI - Hướng dẫn cách dùng trợ lý ảo như Google Gemini để giải đáp thắc mắc, dịch tiếng bản địa và học tập kiến thức mới.">
+  <title>Chi tiết bài học Kỹ năng số - Cẩm nang số</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/detail.css">
+  <link rel="stylesheet" href="../css/kynangso.css"> <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+  <header class="site-header" id="site-header">
+    <div class="container navbar-container">
+      
+      <a href="../index.html" class="brand-logo" id="logo-main">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 19.4c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l1.9-1.9C9.22 19.58 10.57 20 12 20c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 15c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6zm-1-9h2v2h-2zm0 4h2v2h-2z"/>
+        </svg>
+        <div class="brand-text">
+          <span class="brand-title">CẨM NANG SỐ</span>
+          <span class="brand-subtitle">Bình đẳng & Công nghệ vùng sâu</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" aria-label="Menu điều hướng chính">
+        <a href="../index.html" class="nav-link" id="nav-home">Trang chủ</a>
+        <a href="phapluat.html" class="nav-link" id="nav-law">Pháp luật</a>
+        <a href="duan.html" class="nav-link" id="nav-project">Dự án</a>
+        <a href="kynangso.html" class="nav-link active" id="nav-skills">Kỹ năng số</a>
+        <a href="game-luadao.html" class="nav-link" id="nav-game">Trò chơi</a>
+      </nav>
+
+      <div class="mobile-controls">
+        <div class="search-container">
+          <input type="text" placeholder="Tìm khóa học..." class="search-input" aria-label="Tìm kiếm bài học">
+          <button class="search-icon-btn" aria-label="Nút Tìm kiếm">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+            </svg>
+          </button>
+        </div>
+
+        <button class="hamburger-btn" id="hamburger-toggle" aria-label="Mở menu di động">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <div class="mobile-nav-overlay" id="mobile-overlay"></div>
+
+  <div class="mobile-drawer" id="mobile-drawer">
+    <div class="search-container">
+      <input type="text" placeholder="Tìm khóa học..." class="search-input" aria-label="Tìm kiếm bài học di động">
+      <button class="search-icon-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+        </svg>
+      </button>
+    </div>
+    
+    <ul class="mobile-drawer-menu">
+      <li><a href="../index.html" class="mobile-drawer-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Trang chủ</a></li>
+      <li><a href="phapluat.html" class="mobile-drawer-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>Pháp luật</a></li>
+      <li><a href="duan.html" class="mobile-drawer-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 8 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>Dự án cộng đồng</a></li>
+      <li><a href="kynangso.html" class="mobile-drawer-link active"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/></svg>Kỹ năng công nghệ</a></li>
+    </ul>
+  </div>
+
+  <section class="detail-hero-banner" id="skills-detail-hero" style="background-image: linear-gradient(to bottom, rgba(30, 77, 54, 0.4) 0%, rgba(28, 45, 36, 0.95) 100%), url('https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=1200&q=80');">
+    <div class="container">
+      <h1 id="skills-detail-title">Bài học: Trí tuệ nhân tạo (AI) hỗ trợ cuộc sống</h1>
+      <p class="detail-short-desc">
+        Khám phá sức mạnh của trợ lý ảo AI thông minh giúp giải đáp mọi thắc mắc về chăn nuôi, dịch văn bản, làm thơ hay hỗ trợ con em học tập hiệu quả.
+      </p>
+    </div>
+  </section>
+
+  <div class="container py-5">
+    <div class="detail-layout-container">
+      
+      <main class="article-body" id="skills-main-article">
+        
+        <a href="kynangso.html" class="btn-back-link" title="Quay lại trang Kỹ năng số">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+          </svg>
+        </a>
+        
+        <section class="video-section" id="skills-lesson-video" style="margin-top: 0;">
+          <div class="video-wrapper">
+            <iframe width="100%" height="400" src="https://drive.google.com/file/d/1jaf6t0yecelaAb7xn09trzj0i_imMaCC/preview" allowfullscreen></iframe>
+          </div>
+          <p class="video-caption">Video hướng dẫn: Cách nói chuyện bằng giọng nói với trợ lý AI Google Gemini trên điện thoại (Nguồn: Diễn đàn Công nghệ Việt)</p>
+        </section>
+
+        <div class="reading-helper-bar" id="reading-assistant">
+          <div class="helper-title">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 4v3h5v12h3V7h5V4H9zm-6 6v3h3v6h3v-6h3v-3H3z"/></svg>
+            <span class="no-resize">CỠ CHỮ:</span>
+            <div class="resizer-controls" style="margin-left: 8px;">
+              <button class="resizer-btn" id="btn-font-decrease">Nhỏ</button>
+              <button class="resizer-btn" id="btn-font-reset">Chuẩn</button>
+              <button class="resizer-btn" id="btn-font-increase">Lớn</button>
+            </div>
+          </div>
+          
+          <button class="btn btn-secondary" id="btn-mark-read" style="padding: 6px 16px; font-size: 0.9rem; min-height: 38px;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" style="margin-right: 4px; vertical-align: middle;">
+              <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+            </svg> Đánh dấu hoàn thành
+          </button>
+        </div>
+
+        <div class="article-text-content" id="article-text-placeholder">
+          <p>
+            Trí tuệ nhân tạo (AI) nghe có vẻ xa xôi nhưng thực ra giống như một người trợ lý thông thái biết tuốt nằm ngay trong điện thoại của chị em. AI có thể nói chuyện, trả lời bằng tiếng Việt cực kỳ trôi chảy, giúp chị em tìm hiểu cách chữa bệnh cho gà, viết lời chúc Tết hay giải bài tập cho các cháu học sinh trong nhà.
+          </p>
+
+          <h2>Quy trình 3 bước trò chuyện với AI để tìm kiếm kiến thức</h2>
+          <p>
+            Hãy thử mở trang web hoặc ứng dụng AI miễn phí (như Google Gemini) và làm theo hướng dẫn:
+          </p>
+          
+          <ol class="step-study-list">
+            
+            <li class="step-study-item">
+              <div class="step-number">1</div>
+              <div class="step-study-content">
+                <h4>Truy cập ứng dụng AI hoặc công cụ tìm kiếm thông minh</h4>
+                <p>
+                  Dùng điện thoại mở trình duyệt web đi tới địa chỉ **gemini.google.com** (hoặc mở ứng dụng AI được cài trên máy). Giao diện hiện ra sẽ có một ô trống nhỏ ở dưới cùng để chị em nhập câu hỏi giống như gửi tin nhắn Zalo.
+                </p>
+              </div>
+            </li>
+
+            <li class="step-study-item">
+              <div class="step-number">2</div>
+              <div class="step-study-content">
+                <h4>Đặt câu hỏi rõ ràng hoặc sử dụng giọng nói</h4>
+                <p>
+                  Chị em gõ chữ câu hỏi vào ô trống. Nếu ngại gõ chữ, hãy bấm vào hình chiếc **Microphone** rồi nói rõ câu hỏi của mình bằng tiếng Việt (Ví dụ: "Hãy hướng dẫn cách ủ phân hữu cơ từ vỏ cà phê"). Sau đó bấm nút gửi đi.
+                </p>
+              </div>
+            </li>
+
+            <li class="step-study-item">
+              <div class="step-number">3</div>
+              <div class="step-study-content">
+                <h4>Đọc câu trả lời và yêu cầu AI giải thích kỹ hơn</h4>
+                <p>
+                  Chỉ trong vòng 3 giây, AI sẽ viết câu trả lời chi tiết theo từng dòng rõ ràng cho chị em. Nếu thấy dài quá hoặc có từ ngữ khó hiểu, chị em có thể nhắn tiếp: "Hãy tóm tắt ngắn lại và giải thích dễ hiểu hơn cho người nông dân nhé", AI sẽ lập tức sửa lại theo đúng ý.
+                </p>
+              </div>
+            </li>
+
+          </ol>
+        </div>
+
+        <section class="gallery-section" id="skills-screenshot-illustrations">
+          <h3>Hình ảnh minh họa sử dụng AI</h3>
+          <p style="font-size: 0.95rem; color: var(--color-text-muted); margin-bottom: 20px;">
+            Màn hình tương tác trò chuyện hỏi đáp kiến thức nông nghiệp trực tiếp với trợ lý AI:
+          </p>
+          <div class="gallery-grid" style="grid-template-columns: 1fr 1fr;">
+            
+            <div class="gallery-item">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT18P1xIZkTAk5P2XcmNnz0DqkyrpvVw2hHqSQw2irAX27_Sjy4gpAwcdXw&s=10" alt="Giao diện trò chuyện hỏi đáp kiến thức cùng ứng dụng AI trên điện thoại di động" data-lightbox="true">
+              <p class="gallery-caption">Giao diện: Nhập câu hỏi gửi tin nhắn cho AI</p>
+            </div>
+
+            <div class="gallery-item">
+              <img src="https://thanhnien.mediacdn.vn/Uploaded/hoangnam/2021_10_23/a6-9245.jpeg" alt="Con em sử dụng công cụ AI để tra cứu tài liệu học tập tiếng Anh tại nhà" data-lightbox="true">
+              <p class="gallery-caption">Ứng dụng: Hỗ trợ con em tra cứu bài học nhanh chóng</p>
+            </div>
+
+          </div>
+        </section>
+
+        <section class="faq-section" id="skills-faq">
+          <h3>Các câu hỏi thường gặp về Trí tuệ nhân tạo</h3>
+          <p style="font-size: 0.95rem; color: var(--color-text-muted);">
+            Nhấp chọn vào câu hỏi bất kỳ dưới đây để xem lời hướng dẫn giải pháp khắc phục nhanh:
+          </p>
+          
+          <ul class="accordion-list">
+            
+            <li class="accordion-item" id="faq-item-1">
+              <div class="accordion-header">
+                <h4>Tôi có phải trả tiền phí khi nói chuyện với AI không?</h4>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  Không cần trả phí. Các công cụ lớn như Google Gemini hiện tại đều mở phiên bản miễn phí hoàn toàn cho mọi người dân sử dụng. Chị em chỉ cần có tài khoản Gmail thông thường là có thể đăng nhập vào và nói chuyện hàng ngày mà không tốn tiền.
+                </p>
+              </div>
+            </li>
+
+            <li class="accordion-item" id="faq-item-2">
+              <div class="accordion-header">
+                <h4>Thông tin AI trả lời có hoàn toàn chính xác 100% không?</h4>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  **Không hoàn toàn chính xác tuyệt đối.** AI học từ nguồn internet nên đôi lúc có thể bị nhầm lẫn thông số hoặc tên gọi. Vì thế, đối với các kiến thức quan trọng liên quan tới sức khỏe y tế hoặc pháp luật, chị em nên xem câu trả lời của AI để tham khảo trước, sau đó hỏi lại ý kiến cán bộ y tế, cán bộ tư pháp xã cho chắc chắn nhé.
+                </p>
+              </div>
+            </li>
+
+            <li class="accordion-item" id="faq-item-3">
+              <div class="accordion-header">
+                <h4>Tôi muốn dùng AI để dịch từ tiếng phổ thông sang tiếng của đồng bào mình được không?</h4>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  Được nhé chị em. AI hiện nay hỗ trợ dịch thuật rất tốt. Chị em có thể yêu cầu AI dịch các đoạn thơ, lời hát hoặc thông báo từ tiếng Kinh sang tiếng Mông, tiếng Thái... để tuyên truyền cho bà con trong bản dễ tiếp thu hơn.
+                </p>
+              </div>
+            </li>
+
+          </ul>
+        </section>
+
+      </main>
+
+      <aside class="detail-sidebar" id="skills-sidebar">
+        <div class="sidebar-widget" id="widget-related-skills">
+          <h4 class="sidebar-widget-title">Bài học công nghệ khác</h4>
+          <ul class="related-items-list">
+            <li>
+              <a href="kynangso-ketnoi.html" class="related-item-link">
+                <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=150&q=80" alt="Sử dụng Zalo Facebook" class="related-item-img">
+                <div>
+                  <h5 class="related-item-title">Bài 3: Cách gọi video nói chuyện Zalo miễn phí</h5>
+                  <span class="related-item-meta">3 bước • Mạng xã hội</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="kynangso-nganhang.html" class="related-item-link">
+                <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=150&q=80" alt="Ngân hàng số" class="related-item-img">
+                <div>
+                  <h5 class="related-item-title">Bài 4: Quét mã QR thanh toán bằng ngân hàng số</h5>
+                  <span class="related-item-meta">3 bước • Tài chính số</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-info-col">
+          <h4 class="footer-title">CẨM NANG SỐ CỘNG ĐỒNG</h4>
+          <p style="font-size: 0.95rem; line-height: 1.6; color: #A3B8AD;">
+            Nền tảng tri thức số nội bộ hỗ trợ phụ nữ nâng cao kỹ năng cuộc sống, tự bảo vệ trước pháp luật và tiếp cận thương mại điện tử phục vụ phát triển kinh tế gia đình bền vững.
+          </p>
+        </div>
+        <div class="footer-links-col">
+          <h4 class="footer-title">DANH MỤC TÀI LIỆU</h4>
+          <ul class="footer-links">
+            <li><a href="phapluat.html" class="footer-link">Pháp luật & Đời sống</a></li>
+            <li><a href="duan.html" class="footer-link">Dự án & Nhật ký cộng đồng</a></li>
+            <li><a href="kynangso.html" class="footer-link">Thư viện Kỹ năng công nghệ</a></li>
+            <li><a href="../index.html" class="footer-link">Trang chủ cẩm nang</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact-col">
+          <h4 class="footer-title">HỖ TRỢ PHỤ NỮ</h4>
+          <div class="footer-contact-info">
+            <div class="contact-item">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              <span>Văn phòng Hội Liên hiệp Phụ nữ Huyện & Điểm sinh hoạt văn hóa bản</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Cổng thông tin Cẩm nang số Bình đẳng giới vùng cao. Thiết kế chạy offline hoàn hảo cho cơ sở xã/bản.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/navbar.js"></script>
+  <script src="../js/animation.js"></script>
+  <script src="../js/accordion.js"></script>
+  <script src="../js/detail.js"></script>
+  <script src="../js/modal.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+/* ==========================================================================
+   CAM NANG SO BÌNH ĐẲNG GIỚI & KỸ NĂNG SỐ - PHẢN HỒI (RESPONSIVE)
+   ========================================================================== */
+
+/* 1. MÀN HÌNH MÁY TÍNH BẢNG (MIN-WIDTH: 768px) */
+@media (min-width: 768px) {
+  /* Tăng kích thước chữ tiêu đề */
+  h1 { font-size: 2.2rem; }
+  h2 { font-size: 1.8rem; }
+  h3 { font-size: 1.4rem; }
+  
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  /* Grid layout đổi sang 2 cột */
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  
+  /* Lưới Footer thành 2 cột */
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Layout hai cột cho các trang mục lục chính */
+  .hub-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  /* Timeline hoạt động nằm ngang hoặc so le nhẹ */
+  .timeline::before {
+    left: 31px;
+  }
+  .timeline-item {
+    padding-left: 60px;
+  }
+}
+
+/* 2. MÀN HÌNH MÁY TÍNH & LAPTOP (MIN-WIDTH: 992px) */
+@media (min-width: 992px) {
+  /* Kích thước chữ chuẩn Desktop */
+  h1 { font-size: 2.6rem; }
+  
+  /* THAY ĐỔI NAV BAR CHO DESKTOP */
+  .hamburger-btn {
+    display: none; /* Ẩn nút hamburger menu trên máy tính */
+  }
+  
+  .search-container {
+    display: block; /* Hiện thanh tìm kiếm mặc định */
+  }
+  
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 30px;
+  }
+  
+  .nav-link {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--color-text-main);
+    padding: 8px 0;
+    position: relative;
+  }
+  
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--color-primary);
+    border-radius: var(--radius-pill);
+    transition: var(--transition-smooth);
+  }
+  
+  .nav-link:hover::after,
+  .nav-link.active::after {
+    width: 100%;
+  }
+
+  .nav-link.active {
+    color: var(--color-primary);
+  }
+
+  /* Lưới Footer thành 3 cột */
+  .footer-grid {
+    grid-template-columns: 1.5fr 1fr 1.5fr;
+    gap: 50px;
+  }
+
+  /* Grid layout các trang danh sách thành 3 cột */
+  .card-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  /* Trang chi tiết có sidebar (Layout hai cột) */
+  .detail-layout-container {
+    display: grid;
+    grid-template-columns: 8fr 4fr;
+    gap: 40px;
+    align-items: start;
+  }
+
+  .detail-sidebar {
+    position: sticky;
+    top: 100px;
+  }
+}
+
+/* 3. MÀN HÌNH SIÊU LỚN (MIN-WIDTH: 1200px) */
+@media (min-width: 1200px) {
+  .container {
+    padding: 0;
+  }
+}

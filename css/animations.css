@@ -1,0 +1,126 @@
+/* ==========================================================================
+   CAM NANG SO BÌNH ĐẲNG GIỚI & KỸ NĂNG SỐ - HOẠT ẢNH (ANIMATIONS)
+   ========================================================================== */
+
+/* 1. SCROLL REVEAL (HIỆU ỨNG HIỆN DẦN KHI CUỘN TRANG) */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-left.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-right.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Hiệu ứng trễ cho các danh sách (Stagger Delay) */
+.delay-100 { transition-delay: 0.1s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-300 { transition-delay: 0.3s; }
+.delay-400 { transition-delay: 0.4s; }
+
+/* 2. CARD HOVER MICRO-ANIMATION */
+.hover-grow {
+  transition: var(--transition-smooth);
+}
+
+.hover-grow:hover {
+  transform: scale(1.025);
+}
+
+/* Mạch timeline nhấp nháy nhẹ nhàng ở mốc hiện tại */
+@keyframes pulse-ring {
+  0% { transform: scale(0.85); opacity: 0.5; }
+  50% { transform: scale(1.2); opacity: 0.8; }
+  100% { transform: scale(0.85); opacity: 0.5; }
+}
+
+.pulse-dot {
+  position: relative;
+}
+
+.pulse-dot::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  animation: pulse-ring 2s infinite ease-in-out;
+  z-index: 1;
+}
+
+/* 3. ACCORDION HEIGHT SMOOTH TRANSITION */
+.accordion-content {
+  max-height: auto;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), padding 0.35s ease;
+  padding: 0 20px;
+}
+
+.accordion-item.active .accordion-content {
+  padding: auto;
+}
+
+.accordion-header svg {
+  transition: transform 0.3s ease;
+}
+
+.accordion-item.active .accordion-header svg {
+  transform: rotate(180deg);
+}
+
+/* 4. MODAL / LIGHTBOX ZOOM EFFECT */
+@keyframes zoomIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.lightbox-img-animate {
+  animation: zoomIn 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 5. ROTATE LOOP (CHO MÁY PHÁT ĐĨA / TẢI TRANG) */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.spin-slow {
+  animation: spin 8s infinite linear;
+}
+
+/* 6. BOUNCE ANIMATION (CHO ELEMENT NHẢY LÊN XUỐNG) */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+.bounce {
+  animation: bounce 2s infinite ease-in-out;
+}
